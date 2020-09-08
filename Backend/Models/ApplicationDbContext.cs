@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Models
 {
-    public class AplicationDataContext:DbContext
+    public class AplicationDbContext:DbContext
     {
-        public AplicationDataContext(DbContextOptions<AplicationDataContext> options)
+        public AplicationDbContext(DbContextOptions<AplicationDbContext> options)
        : base(options)
         {
 
