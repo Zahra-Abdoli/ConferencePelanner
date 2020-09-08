@@ -341,4 +341,4 @@ healthchecksdb
 Backend/appsettings.json
 Backend/appsettings.Development.json
 
-*.json
+**/*.json
