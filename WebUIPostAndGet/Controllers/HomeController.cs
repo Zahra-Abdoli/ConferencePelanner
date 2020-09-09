@@ -40,18 +40,9 @@ namespace WebUIPostAndGet.Controllers
                 // Read the content.
                 string responseFromServer = reader.ReadToEnd();
                 //parse parse string to json
-                dynamic json = JsonConvert.DeserializeObject(responseFromServer);
-                JObject speakers = JObject.Load(json);
-                var model = new List<Speaker>();
-                foreach (var speaker in speakers)
-                {
-                    // Finally I'm deserializing the value into an actual speker object
-                    var p = JsonConvert.DeserializeObject<Speaker>(speaker.Value.ToString());
+                var models = JsonConvert.DeserializeObject<List<Speaker>>(responseFromServer);
 
-                    model.Add(p);
-                }
-
-                return View(model);
+                return View(models);
 
             }
          
